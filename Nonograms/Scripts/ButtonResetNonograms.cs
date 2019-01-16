@@ -1,24 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Nonograms.Scripts;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class ButtonResetNonograms : MonoBehaviour {
+namespace Nonograms.Scripts {
+    public class ButtonResetNonograms : MonoBehaviour {
+        public NonogramsCreator Creator;
 
-	public NonogramsCreator Creator;
-	
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-	
-	public void Click() {
-		Creator.NumberMap = "{[[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}]],[[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}]]}";
-		Creator.CreateNonograms();
-	}
+        // Use this for initialization
+        void Start() { }
+
+        // Update is called once per frame
+        void Update() { }
+
+        public void Click() {
+            Creator.NumberMap =
+                "{[[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}]],[[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}],[{0|1}]]}";
+
+            Creator.CreateNonograms();
+        }
+    }
 }

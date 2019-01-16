@@ -1,27 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Nonograms.Scripts;
-using UnityEngine;
-using UnityEngine.Serialization;
+﻿using UnityEngine;
 
-public class ButtonGenerateNonograms : MonoBehaviour {
+namespace Nonograms.Scripts {
+    public class ButtonGenerateNonograms : MonoBehaviour {
+        public NonogramsCalculater Calculator;
 
-	public NonogramsCalculater Calculator;
+        public NonogramsCreator Creator;
 
-	public NonogramsCreator Creator;
-	
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+        // Use this for initialization
+        void Start() { }
 
-	public void Click() {
-		Creator.NumberMap = Calculator.NonogramsStr;
-		Creator.GenerateNumber();
-	}
+        // Update is called once per frame
+        void Update() { }
+
+        public void Click() {
+            Creator.NumberMap = Calculator.NonogramsStr;
+            Creator.GenerateNumber();
+        }
+    }
 }

@@ -1,23 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Nonograms.Scripts;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class ButtonCopyNonograms : MonoBehaviour {
+namespace Nonograms.Scripts {
+    public class ButtonCopyNonograms : MonoBehaviour {
+        public NonogramsCalculater Calculator;
 
-	public NonogramsCalculater Calculator;
-	
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+        // Use this for initialization
+        void Start() { }
 
-	public void Click() {
-		GUIUtility.systemCopyBuffer = Calculator.NonogramsStr;
-	}
+        // Update is called once per frame
+        void Update() { }
+
+        public void Click() {
+            GUIUtility.systemCopyBuffer = Calculator.NonogramsStr;
+        }
+    }
 }

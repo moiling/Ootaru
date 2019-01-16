@@ -14,7 +14,7 @@ namespace Nonograms.Scripts {
 
             var split = str.Split('|');
             this.Count = int.Parse(split[0]);
-            this.Type = (NonogramsType)int.Parse(split[1]);
+            this.Type = (NonogramsType) int.Parse(split[1]);
         }
     }
 }

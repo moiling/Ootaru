@@ -10,7 +10,7 @@ namespace CardMode.Scripts {
 
         // Update is called once per frame
         void Update() {
-        
+
             // TODO 摄像机角度变化，为什么会旋转到Z坐标
             //Zoom out
             if (Input.GetAxis("Mouse ScrollWheel") < 0) {
@@ -35,7 +35,7 @@ namespace CardMode.Scripts {
             } else if (Input.GetMouseButton(1)) { // 右键
                 var x = Input.GetAxis("Mouse X");
                 transform.RotateAround(transform.position, Vector3.up, Time.deltaTime * MoveSpeed * x);
-               // transform.Rotate(0, Time.deltaTime * MoveSpeed * x, 0, Space.World);
+                // transform.Rotate(0, Time.deltaTime * MoveSpeed * x, 0, Space.World);
             }
 
 
@@ -43,9 +43,11 @@ namespace CardMode.Scripts {
 
             var cameraToPlayerDistance = 6f;
             var playerHeight = 2f;
-            var upDownRotateY = playerHeight + cameraToPlayerDistance 
+
+            var upDownRotateY = playerHeight + cameraToPlayerDistance
                                 * Mathf.Sin(transform.rotation.eulerAngles.x * Mathf.PI / 180); // 上下旋转处理后的Y
-            var upDownRotateZ = cameraToPlayerDistance 
+
+            var upDownRotateZ = cameraToPlayerDistance
                                 * Mathf.Cos(transform.rotation.eulerAngles.x * Mathf.PI / 180); // 上下旋转处理后的Z
 
             var leftRightRotateX = -Mathf.Sin(transform.rotation.eulerAngles.y * Mathf.PI / 180) *

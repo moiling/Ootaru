@@ -1,22 +1,16 @@
 ﻿using UnityEngine;
 using UnityEngine.Rendering;
 
-namespace CardMode.Scripts {
-	public class SpriteShadow : MonoBehaviour {
+namespace Scrpites {
+    public class SpriteShadow : MonoBehaviour {
+        public bool ShadowOnly;
 
-		public bool ShadowOnly;
+        void OnEnable() {
 
-		void OnEnable() {
+            transform.GetComponent<SpriteRenderer>().receiveShadows = true;
 
-			transform.GetComponent<SpriteRenderer>().receiveShadows = true;
-
-			if (ShadowOnly) {
-				transform.GetComponent<SpriteRenderer>().shadowCastingMode = ShadowCastingMode.ShadowsOnly;
-			} else {
-				transform.GetComponent<SpriteRenderer>().shadowCastingMode = ShadowCastingMode.On;
-			}
-
-
-		}
-	}
+            transform.GetComponent<SpriteRenderer>().shadowCastingMode =
+                ShadowOnly ? ShadowCastingMode.ShadowsOnly : ShadowCastingMode.On;
+        }
+    }
 }

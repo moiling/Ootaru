@@ -9,4 +9,5 @@
 *.mp3
 *.mat
 *.prefab
+*.controller
 **/.DS_Store
