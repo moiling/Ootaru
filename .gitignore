@@ -1,0 +1,12 @@
+*.meta
+*.dll
+*.unity
+*.anim
+*.png
+*.jpg
+*.jpeg
+*.bmp
+*.mp3
+*.mat
+*.prefab
+**/.DS_Store
