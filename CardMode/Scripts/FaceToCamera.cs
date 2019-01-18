@@ -13,7 +13,7 @@ namespace CardMode.Scripts {
 	
 		// Update is called once per frame
 		void Update () {
-			Debug.Log(_camera.transform.localRotation.y);
+			//Debug.Log(_camera.transform.localRotation.y);
 			if (_camera) {
 				transform.eulerAngles = new Vector3(transform.eulerAngles.x, _camera.transform.eulerAngles.y, transform.eulerAngles.z);
 			}

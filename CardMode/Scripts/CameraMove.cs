@@ -23,7 +23,9 @@ namespace CardMode.Scripts {
 
                 if (GetComponent<Camera>().orthographicSize <= 20)
                     GetComponent<Camera>().orthographicSize += 0.5F;
-            } else if (Input.GetAxis("Mouse ScrollWheel") > 0) { //Zoom in
+            }  
+            // Zoom in
+            if (Input.GetAxis("Mouse ScrollWheel") > 0) { //Zoom in
                 if (GetComponent<Camera>().fieldOfView > 40) {
                     GetComponent<Camera>().fieldOfView -= 2;
                     // 角度跟随fieldOfView变化，从0度到80度，对应fieldOfView的40-120
@@ -32,7 +34,9 @@ namespace CardMode.Scripts {
 
                 if (GetComponent<Camera>().orthographicSize >= 1)
                     GetComponent<Camera>().orthographicSize -= 0.5F;
-            } else if (Input.GetMouseButton(1)) { // 右键
+            }
+            // Rotate
+            if (Input.GetMouseButton(1)) { // 右键
                 var x = Input.GetAxis("Mouse X");
                 transform.RotateAround(transform.position, Vector3.up, Time.deltaTime * MoveSpeed * x);
                 // transform.Rotate(0, Time.deltaTime * MoveSpeed * x, 0, Space.World);
