@@ -16,6 +16,15 @@ namespace CardMode.Scripts {
                     -Mathf.Sin(transform.rotation.eulerAngles.y * Mathf.PI / 180) * Speed,
                     0f,
                     -Mathf.Cos(transform.rotation.eulerAngles.y * Mathf.PI / 180) * Speed);
+                /*
+                transform.Translate(
+                    new Vector3(
+                        -Mathf.Sin(transform.rotation.eulerAngles.y * Mathf.PI / 180),
+                        0f,
+                        -Mathf.Cos(transform.rotation.eulerAngles.y * Mathf.PI / 180))
+                    * Time.deltaTime * Speed
+                );
+                */
 
                 GetComponent<Animator>().SetBool("WalkForward", true);
                 GetComponent<Animator>().SetBool("WalkBack", false);
@@ -62,6 +71,17 @@ namespace CardMode.Scripts {
                 GetComponent<Animator>().SetBool("WalkLeft", false);
                 GetComponent<Animator>().SetBool("WalkRight", false);
             }
+
+            GetComponent<Rigidbody>().useGravity = !IsOnGround();
+        }
+        
+        private bool IsOnGround() {
+
+            LayerMask groundLayer = 1 << LayerMask.NameToLayer("Ground"); // 只检测地板这层
+            Debug.DrawRay(transform.position, Vector2.down * 0.2f, Color.green);
+            bool retVal = Physics.Raycast(transform.position, Vector2.down, 0.2f, groundLayer);
+
+            return retVal;
         }
     }
 }

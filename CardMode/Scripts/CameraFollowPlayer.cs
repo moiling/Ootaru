@@ -3,6 +3,9 @@ using UnityEngine;
 namespace CardMode.Scripts {
     public class CameraFollowPlayer : MonoBehaviour {
         public GameObject Player;
+        public float FollowSpeed;
+
+        public bool Lerp;
         
         private void Update() {
             if (Player == null) return;
@@ -21,8 +24,15 @@ namespace CardMode.Scripts {
 
             var leftRightRotateZ = -Mathf.Cos(transform.rotation.eulerAngles.y * Mathf.PI / 180) * upDownRotateZ;
 
-            transform.position = Player.transform.position +
+            var destination = Player.transform.position +
                                  new Vector3(leftRightRotateX, upDownRotateY, leftRightRotateZ);
+
+            if (Lerp) {
+                transform.position = Vector3.Lerp(transform.position, destination, FollowSpeed * Time.deltaTime);
+            } else {
+                transform.position = destination;
+            }
+            
         }
     }
 }
