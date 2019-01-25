@@ -112,7 +112,7 @@ namespace Scripts.DSL {
 
                     // 但{p}还有特殊跳转操作需要解析，如{p@TAG}和{p@TAG STAGE}
                     if (s[index + 2].Equals('@')) {
-                        var list = s.Substring(index + 3, s.Length - (index + 5)).Split(' '); // 把TAG剪出来
+                        var list = s.Substring(index + 3, s.Length - (index + 4)).Split(' '); // 把TAG剪出来
 
                         if (list.Length == 1) {
                             if (list[0].Equals(Constants.OPERATION_END)) {

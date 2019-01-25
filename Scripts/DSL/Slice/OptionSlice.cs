@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Xml;
 
 namespace Scripts.DSL.Slice {
     public class OptionSlice : BaseSlice {
