@@ -4,20 +4,24 @@ namespace CardMode.Scripts {
 	public class FaceToCamera : MonoBehaviour {
 
 		private Camera _camera;
-		// Use this for initialization
-		void Start () {
+		private Vector3 _lastEulerAngles = Vector3.zero;
+		
+		private void Start () {
 			if (Camera.main) {
 				_camera = Camera.main;
 			}
 		}
 	
-		// Update is called once per frame
-		void Update () {
-			//Debug.Log(_camera.transform.localRotation.y);
-			if (_camera) {
-				transform.eulerAngles = new Vector3(transform.eulerAngles.x, _camera.transform.eulerAngles.y, transform.eulerAngles.z);
-			}
-			
+		private void Update () {
+			if (!_camera) return;
+
+			var eulerAngles = new Vector3(transform.eulerAngles.x, _camera.transform.eulerAngles.y,
+				transform.eulerAngles.z);
+
+			if (eulerAngles == _lastEulerAngles) return;
+
+			transform.eulerAngles = eulerAngles;
+			_lastEulerAngles = eulerAngles;
 		}
 	}
 }

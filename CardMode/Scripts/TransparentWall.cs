@@ -6,9 +6,8 @@ namespace CardMode.Scripts {
 
         private GameObject _lastObject;
 
-
-        void Update() {
-            Debug.DrawLine(Player.transform.position, transform.position, Color.red);
+        private void Update() {
+            // Debug.DrawLine(Player.transform.position, transform.position, Color.red);
 
             RaycastHit hit;
 
@@ -16,33 +15,27 @@ namespace CardMode.Scripts {
 
                 _lastObject = hit.collider.gameObject;
 
-                string name_tag = _lastObject.tag;
+                var nameTag = _lastObject.tag;
 
-                if (name_tag != "MainCamera" && name_tag != "terrain") {
-                    Debug.Log(_lastObject);
-                    Color obj_color = _lastObject.GetComponent<SpriteRenderer>().color;
+                if (nameTag == "MainCamera" || nameTag == "terrain") return;
 
-                    obj_color.a = 0.2f;
+                Debug.Log(_lastObject);
+                var objColor = _lastObject.GetComponent<SpriteRenderer>().color;
 
-                    _lastObject.GetComponent<SpriteRenderer>().color = obj_color;
-                    //_lastObject.GetComponent<SpriteRenderer>().material.SetColor("Tint", obj_color);
+                objColor.a = 0.2f;
 
-                }
+                _lastObject.GetComponent<SpriteRenderer>().color = objColor;
 
             } //还原
 
-            else if (
-                _lastObject != null) {
+            else if (_lastObject != null) {
 
-                Color obj_color = _lastObject.GetComponent<SpriteRenderer>().color;
+                var objColor = _lastObject.GetComponent<SpriteRenderer>().color;
 
-                obj_color.a = 1.0f;
+                objColor.a = 1.0f;
 
-                _lastObject.GetComponent<SpriteRenderer>().color = obj_color;
-                //_lastObject.GetComponent<SpriteRenderer>().material.SetColor("Tint", obj_color);
-
+                _lastObject.GetComponent<SpriteRenderer>().color = objColor;
                 _lastObject = null;
-
             }
 
         }

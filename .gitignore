@@ -10,4 +10,5 @@
 *.mat
 *.prefab
 *.controller
+*.txt
 **/.DS_Store

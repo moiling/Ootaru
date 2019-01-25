@@ -13,6 +13,7 @@ namespace CardMode.Scripts {
             var cameraToPlayerDistance = 6f;
             var playerHeight = 2f;
 
+            // TODO 摄像机旋转带来的改变放在旋转中处理，不旋转的时候不要进行大量计算，角色未移动时不要计算
             var upDownRotateY = playerHeight + cameraToPlayerDistance
                                 * Mathf.Sin(transform.rotation.eulerAngles.x * Mathf.PI / 180); // 上下旋转处理后的Y
 

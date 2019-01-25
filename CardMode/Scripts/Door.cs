@@ -8,14 +8,8 @@ public class Door : MonoBehaviour {
 	public GameObject Player;
 
 	private bool _stay;
-	
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+
+	private void Update () {
 		if (_stay) {
 			if (Input.GetKeyDown(KeyCode.Space)) {
 				var difference = Player.transform.position - transform.position;

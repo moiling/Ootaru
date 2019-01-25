@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Rendering;
 
-namespace Scrpites {
+namespace Scripts {
     public class SpriteShadow : MonoBehaviour {
         public bool ShadowOnly;
 

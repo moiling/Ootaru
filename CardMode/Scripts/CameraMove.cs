@@ -5,11 +5,7 @@ namespace CardMode.Scripts {
         public GameObject Player;
         public float MoveSpeed;
 
-        // Use this for initialization
-        void Start() { }
-
-        // Update is called once per frame
-        void Update() {
+        private void Update() {
 
             // TODO 摄像机角度变化，为什么会旋转到Z坐标
             //Zoom out

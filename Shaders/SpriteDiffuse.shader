@@ -3,8 +3,8 @@
     Properties
     {
         _MainTex("Albedo (RGB)", 2D) = "white" {}
-		_Color("Color Tint",Color)=(1,1,1,1)
-		_AlphaCut("AlphaCut",Range(0,1))=1
+        _Color("Color Tint",Color)=(1,1,1,1)
+        _AlphaCut("AlphaCut",Range(0,1))=1
      }
  
     SubShader
@@ -13,13 +13,11 @@
         LOD 200
  
         CGPROGRAM
-        #pragma surface surf Lambert addShadow alphatest:_AlphaCut
+        #pragma surface surf Lambert alphatest:_AlphaCut
  
         sampler2D _MainTex;
         fixed4 _Color;
 		
- 
- 
         struct Input
         {
             float2 uv_MainTex;
