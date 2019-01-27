@@ -58,6 +58,7 @@ namespace Scripts.DSL {
                 return;
             }
 
+            // TODO 不止有TAG了，#变为一次性操作符
             if (s.StartsWith("#")) { // TAG
                 _currentTag = s.Substring(1, s.Length - 1);
 

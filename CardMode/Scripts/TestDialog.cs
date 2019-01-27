@@ -16,6 +16,7 @@ namespace CardMode.Scripts {
                 _testDialog = new DslRunner(Dialog.text);
                 
             }
+            
         }
 
         private void Update() {

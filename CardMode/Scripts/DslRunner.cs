@@ -2,7 +2,7 @@ using Scripts.DSL;
 using UnityEngine;
 
 namespace CardMode.Scripts {
-    public class DslRunner : BaseDslRunner {
+    public class DslRunner : OperationDslRunner {
         
         // TODO 要有一个开关判断是否可以进行下一段话，选项时不能按回车下一段话，只能选择
         // TODO 显示文字又显示对话框的时候需要再点击一次才能显示对话框
