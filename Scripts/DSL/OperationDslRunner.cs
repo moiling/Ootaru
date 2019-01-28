@@ -14,19 +14,10 @@ namespace Scripts.DSL {
                     Set(operation.Parameter, operation.Extra);
                     break;
                 case Constants.OPERATION_CHARACTER:
-                    Character(operation.Parameter);
+                    Character(operation.Parameter.Split(','));
                     break;
-                case Constants.OPERATION_EMOTION:
-                    Emotion(operation.Parameter);
-                    break;
-                case Constants.OPERATION_TEXT_SPEED:
-                    TextSpeed(operation.Parameter);
-                    break;
-                case Constants.OPERATION_TEXT_COLOR:
-                    TextColor(operation.Parameter);
-                    break;
-                case Constants.OPERATION_TEXT_SIZE:
-                    TextSize(operation.Parameter);
+                case Constants.OPERATION_FACE:
+                    Face(operation.Parameter.Split(','), operation.Extra.Split(','));
                     break;
                 case Constants.OPERATION_NAME:
                     Name(operation.Parameter);
@@ -58,15 +49,9 @@ namespace Scripts.DSL {
 
         protected abstract void Name(string name);
 
-        protected abstract void TextSize(string size);
+        protected abstract void Face(string[] emotionIds, string[] positions);
 
-        protected abstract void TextColor(string color);
-
-        protected abstract void TextSpeed(string speed);
-
-        protected abstract void Emotion(string emotionId);
-
-        protected abstract void Character(string characterId);
+        protected abstract void Character(string[] characterIds);
 
         protected abstract void Set(string parameter, string value);
     }

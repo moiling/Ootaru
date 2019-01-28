@@ -8,13 +8,13 @@ namespace Scripts.DSL.Slice {
 
     public class BaseSlice {
         public DslSliceType Type { set; get; }
-        public List<Operation> Operations { set; get; }
-        public string Tag { set; get; }
+        public List<Operation> AtOperations { set; get; }
+        public List<Operation> SharpOperations { set; get; }
 
-        protected BaseSlice(DslSliceType type, List<Operation> operations, string tag) {
+        protected BaseSlice(DslSliceType type, List<Operation> atOperations, List<Operation> sharpOperations) {
             Type = type;
-            Operations = operations;
-            Tag = tag;
+            AtOperations = atOperations;
+            SharpOperations = sharpOperations;
         }
     }
 }

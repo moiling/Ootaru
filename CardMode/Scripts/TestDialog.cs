@@ -35,6 +35,10 @@ namespace CardMode.Scripts {
             if (Input.GetKeyDown(KeyCode.C)) {
                 _testDialog.Select(2);
             }
+
+            if (Input.GetKeyDown(KeyCode.V)) {
+                Debug.Log(_testDialog.CurrentIntro);
+            }
         }
     }
 }

@@ -1,5 +1,12 @@
 namespace Scripts.DSL {
+
+    public enum OperationType {
+        At,
+        Sharp
+    }
+
     public class Operation {
+        public OperationType Type { get; set; }
         public string Method { get; set; }
         public string Parameter { get; set; }
         public string Extra { get; set; }
@@ -10,13 +17,16 @@ namespace Scripts.DSL {
          *  三命令: source STAGE_0 TAG_1、set BOOK 1
          */
 
-        public Operation(string method, string parameter, string extra) {
+        public Operation(OperationType type, string method, string parameter, string extra) {
+            Type = type;
             Method = method;
             Parameter = parameter;
             Extra = extra;
         }
 
-        public Operation(string[] strList) {
+        public Operation(OperationType type, string[] strList) {
+            Type = type;
+            
             if (strList.Length < 1) return;
 
             Method = strList[0];
@@ -31,7 +41,15 @@ namespace Scripts.DSL {
         }
 
         public override string ToString() {
-            var result = "Operation:@" + Method + " " + Parameter + " " + Extra;
+            var result = "Operation:";
+
+            if (Type == OperationType.At) {
+                result += "@";
+            } else {
+                result += "#";
+            }
+            
+            result += Method + " " + Parameter + " " + Extra;
             return result;
         }
     }

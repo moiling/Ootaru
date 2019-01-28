@@ -10,8 +10,8 @@ namespace Scripts.DSL {
         public List<BaseSlice> Slices = new List<BaseSlice>();
         public Hashtable TagSliceIndex = new Hashtable();
 
-        private List<Operation> _currentOperations = new List<Operation>();
-        private string _currentTag = "";
+        private List<Operation> _currentAtOperations = new List<Operation>();
+        private List<Operation> _currentSharpOperations = new List<Operation>();
         private DslSliceType _currentSliceType = DslSliceType.Dialog; // 默认是对话
         private StringBuilder _currentContent = new StringBuilder();
         private Operation _currentEndOperation;
@@ -53,19 +53,20 @@ namespace Scripts.DSL {
             }
 
             if (s.StartsWith("@")) { // 操作
-                _currentOperations.Add(new Operation(s.Substring(1, s.Length - 1).Split(' ')));
+                _currentAtOperations.Add(new Operation(OperationType.At, s.Substring(1, s.Length - 1).Split(' ')));
 
                 return;
             }
 
             // TODO 不止有TAG了，#变为一次性操作符
             if (s.StartsWith("#")) { // TAG
-                _currentTag = s.Substring(1, s.Length - 1);
-
+                // _currentTag = s.Substring(1, s.Length - 1);
+                _currentSharpOperations.Add(new Operation(OperationType.Sharp, s.Substring(1, s.Length - 1).Split(' ')));
                 return;
             }
 
-            if (s.StartsWith("{")) {              // 选择支
+            //if (s.StartsWith("{")) {              // 选择支
+            if (s.StartsWith("{") && (s.Length == 1 || (s[1] != 's' && s[1] != 'p'))) {
                 if (_currentContent.Length > 0) { // 上一个对话分片没有以{p}结束，继续显示，手动切片
                     Cut();
                 }
@@ -117,12 +118,12 @@ namespace Scripts.DSL {
 
                         if (list.Length == 1) {
                             if (list[0].Equals(Constants.OPERATION_END)) {
-                                _currentEndOperation = new Operation(Constants.OPERATION_END, null, null);
+                                _currentEndOperation = new Operation(OperationType.At, Constants.OPERATION_END, null, null);
                             } else {
-                                _currentEndOperation = new Operation(Constants.OPERATION_JUMP, list[0], null);
+                                _currentEndOperation = new Operation(OperationType.At, Constants.OPERATION_JUMP, list[0], null);
                             }
                         } else if (list.Length == 2) {
-                            _currentEndOperation = new Operation(Constants.OPERATION_SOURCE, list[0], list[1]);
+                            _currentEndOperation = new Operation(OperationType.At, Constants.OPERATION_SOURCE, list[0], list[1]);
                         }
                     }
 
@@ -136,19 +137,28 @@ namespace Scripts.DSL {
         }
 
         private void Cut() {
-            if (!_currentTag.Equals("")) {                    // 当前切片有Tag，保存在HashMap中
-                TagSliceIndex.Add(_currentTag, Slices.Count); // 这个Count正好是将要添加的切片的下标
+            var tag = "";
+
+            foreach (var operation in _currentSharpOperations) {
+                if (!operation.Method.Equals("tag")) continue;
+
+                tag = operation.Parameter;
+                break;
             }
+            
+            if (!tag.Equals("")) {                    // 当前切片有Tag，保存在HashMap中
+                TagSliceIndex.Add(tag, Slices.Count); // 这个Count正好是将要添加的切片的下标
+            }        
 
             switch (_currentSliceType) {
                 case DslSliceType.Dialog:
 
-                    Slices.Add(new DialogSlice(_currentOperations, _currentTag, _currentyDialogSliceType,
+                    Slices.Add(new DialogSlice(_currentAtOperations, _currentSharpOperations, _currentyDialogSliceType,
                         _currentContent.ToString(), _currentEndOperation));
 
                     break;
                 case DslSliceType.Option:
-                    Slices.Add(new OptionSlice(_currentOperations, _currentTag, _currentOptions));
+                    Slices.Add(new OptionSlice(_currentAtOperations, _currentSharpOperations, _currentOptions));
 
                     break;
                 default:
@@ -161,8 +171,8 @@ namespace Scripts.DSL {
 
         private void Clear() {
             // 清场
-            _currentOperations = new List<Operation>();
-            _currentTag = "";
+            _currentAtOperations = new List<Operation>();
+            _currentSharpOperations = new List<Operation>();
             _currentSliceType = DslSliceType.Dialog;
             _currentContent.Remove(0, _currentContent.Length);
             _currentEndOperation = null;

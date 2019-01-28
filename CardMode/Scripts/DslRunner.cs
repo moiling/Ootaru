@@ -1,3 +1,4 @@
+using System.Linq;
 using Scripts.DSL;
 using UnityEngine;
 
@@ -12,51 +13,47 @@ namespace CardMode.Scripts {
         }
         
         protected override void Fx(string fxId) {
-            Debug.Log("执行特效" + fxId);
+            Debug.Log("执行特效：" + fxId);
         }
 
         protected override void Do(string things) {
-            Debug.Log("执行事件" + things);
+            Debug.Log("执行事件：" + things);
         }
 
         protected override void Bgm(string bgmId) {
-            Debug.Log("设置BGM" + bgmId);
+            Debug.Log("设置BGM：" + bgmId);
         }
 
         protected override void Voice(string voiceId) {
-            Debug.Log("设置Voice" + voiceId);
+            Debug.Log("设置Voice：" + voiceId);
         }
 
         protected override void Name(string name) {
-            Debug.Log("设置Name" + name);
+            Debug.Log("设置Name：" + name);
         }
 
-        protected override void TextSize(string size) {
-            Debug.Log("设置TextSize" + size);
+        protected override void Face(string[] emotionIds, string[] positions) {
+            var show = "设置表情：";
+
+            for (var i = 0; i < emotionIds.Length; i++) {
+                show += emotionIds[i] + "[" + positions[i] + "]";
+            }
+
+            Debug.Log(show);
         }
 
-        protected override void TextColor(string color) {
-            Debug.Log("设置TextColor" + color);
-        }
+        protected override void Character(string[] characterIds) {
+            var show = characterIds.Aggregate("设置说话角色：", (current, c) => current + c);
 
-        protected override void TextSpeed(string speed) {
-            Debug.Log("设置TextSpeed" + speed);
-        }
-
-        protected override void Emotion(string emotionId) {
-            Debug.Log("设置Emotion" + emotionId);
-        }
-
-        protected override void Character(string characterId) {
-            Debug.Log("设置Character" + characterId);
+            Debug.Log("设置Character：" + show);
         }
 
         protected override void Set(string parameter, string value) {
-            Debug.Log("设置" + parameter + ":" + value);
+            Debug.Log("设置：" + parameter + ":" + value);
         }
 
         protected override void AfterSentenceSlice() {
-            Debug.Log("断句");
+            Debug.Log("断句，不操作");
         }
 
         protected override void AfterPageSlice() {
@@ -72,11 +69,11 @@ namespace CardMode.Scripts {
         }
 
         protected override void AppendContent(string content) {
-            Debug.Log("添加文字" + content);
+            Debug.Log("添加文字：" + content);
         }
 
         protected override void ShowOptions(string[] options) {
-            Debug.Log("显示选择支" + options + "关闭点击换页功能");
+            Debug.Log("显示选择支：" + options + "，关闭点击换页功能");
         }
     }
 }

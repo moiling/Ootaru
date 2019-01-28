@@ -16,7 +16,7 @@ namespace Scripts.DSL {
             }
             
             Name = list[0];
-            Operation = new Operation(list[1].Substring(1, list[1].Length - 1).Split(' '));
+            Operation = new Operation(OperationType.At, list[1].Substring(1, list[1].Length - 1).Split(' '));
         }
 
         public override string ToString() {
