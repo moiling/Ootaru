@@ -3,60 +3,64 @@
 namespace CardMode.Scripts {
     public class PlayerController : MonoBehaviour {
         public float Speed;
+        public bool DoNotMove;
 
         private void Update() {
 
-            if (Input.GetKey(KeyCode.S)) {
+            if (!DoNotMove) {
+                if (Input.GetKey(KeyCode.S)) {
 
-                GetComponent<Rigidbody>().velocity = new Vector3(
-                    -Mathf.Sin(transform.rotation.eulerAngles.y * Mathf.PI / 180) * Speed,
-                    0f,
-                    -Mathf.Cos(transform.rotation.eulerAngles.y * Mathf.PI / 180) * Speed);
+                    GetComponent<Rigidbody>().velocity = new Vector3(
+                        -Mathf.Sin(transform.rotation.eulerAngles.y * Mathf.PI / 180) * Speed,
+                        0f,
+                        -Mathf.Cos(transform.rotation.eulerAngles.y * Mathf.PI / 180) * Speed);
 
-                GetComponent<Animator>().SetBool("WalkForward", true);
-                GetComponent<Animator>().SetBool("WalkBack", false);
-                GetComponent<Animator>().SetBool("WalkLeft", false);
-                GetComponent<Animator>().SetBool("WalkRight", false);
-            } else if (Input.GetKey(KeyCode.W)) {
+                    GetComponent<Animator>().SetBool("WalkForward", true);
+                    GetComponent<Animator>().SetBool("WalkBack", false);
+                    GetComponent<Animator>().SetBool("WalkLeft", false);
+                    GetComponent<Animator>().SetBool("WalkRight", false);
+                } else if (Input.GetKey(KeyCode.W)) {
 
-                GetComponent<Rigidbody>().velocity = new Vector3(
-                    Mathf.Sin(transform.rotation.eulerAngles.y * Mathf.PI / 180) * Speed,
-                    0f,
-                    Mathf.Cos(transform.rotation.eulerAngles.y * Mathf.PI / 180) * Speed);
+                    GetComponent<Rigidbody>().velocity = new Vector3(
+                        Mathf.Sin(transform.rotation.eulerAngles.y * Mathf.PI / 180) * Speed,
+                        0f,
+                        Mathf.Cos(transform.rotation.eulerAngles.y * Mathf.PI / 180) * Speed);
 
-                GetComponent<Animator>().SetBool("WalkForward", false);
-                GetComponent<Animator>().SetBool("WalkBack", true);
-                GetComponent<Animator>().SetBool("WalkLeft", false);
-                GetComponent<Animator>().SetBool("WalkRight", false);
-            } else if (Input.GetKey(KeyCode.A)) {
+                    GetComponent<Animator>().SetBool("WalkForward", false);
+                    GetComponent<Animator>().SetBool("WalkBack", true);
+                    GetComponent<Animator>().SetBool("WalkLeft", false);
+                    GetComponent<Animator>().SetBool("WalkRight", false);
+                } else if (Input.GetKey(KeyCode.A)) {
 
-                GetComponent<Rigidbody>().velocity = new Vector3(
-                    -Mathf.Cos(transform.rotation.eulerAngles.y * Mathf.PI / 180) * Speed,
-                    0f,
-                    Mathf.Sin(transform.rotation.eulerAngles.y * Mathf.PI / 180) * Speed);
+                    GetComponent<Rigidbody>().velocity = new Vector3(
+                        -Mathf.Cos(transform.rotation.eulerAngles.y * Mathf.PI / 180) * Speed,
+                        0f,
+                        Mathf.Sin(transform.rotation.eulerAngles.y * Mathf.PI / 180) * Speed);
 
-                GetComponent<Animator>().SetBool("WalkForward", false);
-                GetComponent<Animator>().SetBool("WalkBack", false);
-                GetComponent<Animator>().SetBool("WalkLeft", true);
-                GetComponent<Animator>().SetBool("WalkRight", false);
-            } else if (Input.GetKey(KeyCode.D)) {
+                    GetComponent<Animator>().SetBool("WalkForward", false);
+                    GetComponent<Animator>().SetBool("WalkBack", false);
+                    GetComponent<Animator>().SetBool("WalkLeft", true);
+                    GetComponent<Animator>().SetBool("WalkRight", false);
+                } else if (Input.GetKey(KeyCode.D)) {
 
-                GetComponent<Rigidbody>().velocity = new Vector3(
-                    Mathf.Sin((90 - transform.rotation.eulerAngles.y) * Mathf.PI / 180) * Speed,
-                    0f,
-                    -Mathf.Cos((90 - transform.rotation.eulerAngles.y) * Mathf.PI / 180) * Speed);
+                    GetComponent<Rigidbody>().velocity = new Vector3(
+                        Mathf.Sin((90 - transform.rotation.eulerAngles.y) * Mathf.PI / 180) * Speed,
+                        0f,
+                        -Mathf.Cos((90 - transform.rotation.eulerAngles.y) * Mathf.PI / 180) * Speed);
 
-                GetComponent<Animator>().SetBool("WalkForward", false);
-                GetComponent<Animator>().SetBool("WalkBack", false);
-                GetComponent<Animator>().SetBool("WalkLeft", false);
-                GetComponent<Animator>().SetBool("WalkRight", true);
-            } else {
+                    GetComponent<Animator>().SetBool("WalkForward", false);
+                    GetComponent<Animator>().SetBool("WalkBack", false);
+                    GetComponent<Animator>().SetBool("WalkLeft", false);
+                    GetComponent<Animator>().SetBool("WalkRight", true);
+                } else {
 
-                GetComponent<Rigidbody>().velocity = Vector3.zero;
-                GetComponent<Animator>().SetBool("WalkForward", false);
-                GetComponent<Animator>().SetBool("WalkBack", false);
-                GetComponent<Animator>().SetBool("WalkLeft", false);
-                GetComponent<Animator>().SetBool("WalkRight", false);
+                    GetComponent<Rigidbody>().velocity = Vector3.zero;
+                    GetComponent<Animator>().SetBool("WalkForward", false);
+                    GetComponent<Animator>().SetBool("WalkBack", false);
+                    GetComponent<Animator>().SetBool("WalkLeft", false);
+                    GetComponent<Animator>().SetBool("WalkRight", false);
+                }
+
             }
 
             GetComponent<Rigidbody>().useGravity = !IsOnGround();

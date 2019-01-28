@@ -17,7 +17,18 @@ namespace Scripts.DSL {
                     Character(operation.Parameter.Split(','));
                     break;
                 case Constants.OPERATION_FACE:
-                    Face(operation.Parameter.Split(','), operation.Extra.Split(','));
+                    string[] positions;
+                    // 缺省为L
+                    if (operation.Extra == null || operation.Extra.Equals("")) {
+                        positions = new string[operation.Parameter.Length];
+
+                        for (var i = 0; i < operation.Parameter.Length; i++) {
+                            positions[i] = "L";
+                        }
+                    } else {
+                        positions = operation.Extra.Split(',');
+                    }
+                    Face(operation.Parameter.Split(','), positions);
                     break;
                 case Constants.OPERATION_NAME:
                     Name(operation.Parameter);
@@ -28,6 +39,9 @@ namespace Scripts.DSL {
                 case Constants.OPERATION_BGM:
                     Bgm(operation.Parameter);
                     break;
+                case Constants.OPERATION_SOUND:
+                    Sound(operation.Parameter);
+                    break;
                 case Constants.OPERATION_DO:
                     Do(operation.Parameter);
                     break;
@@ -36,24 +50,28 @@ namespace Scripts.DSL {
                     break;     
             }
         }
-        
+
         // ----- 添加@标签内容 -----
         
         protected abstract void Fx(string fxId);
 
-        protected abstract void Do(string things);
-
         protected abstract void Bgm(string bgmId);
 
         protected abstract void Voice(string voiceId);
+        
+        protected abstract void Sound(string soundId);
 
         protected abstract void Name(string name);
 
         protected abstract void Face(string[] emotionIds, string[] positions);
 
         protected abstract void Character(string[] characterIds);
+        
+        // ----- 添加#标签内容 -----
 
         protected abstract void Set(string parameter, string value);
+        
+        protected abstract void Do(string things);
     }
 
 }

@@ -106,6 +106,8 @@ namespace Scripts.DSL {
                     // {s}后可能还有剩余的不换行的字符串，需要保存起来，下次继续解析，一次递归就好
                     if (s.Length > index + 3) {
                         ParseLine(s.Substring(index + 3, s.Length - (index + 3)));
+                    } else {
+                        _currentContent.Append("\n");
                     }
                 } else if (s[index + 1].Equals('p')) { // 换页
                     _currentyDialogSliceType = DialogSliceType.Page;

@@ -50,19 +50,29 @@ namespace Scripts.DSL {
             }
 
             if (sliceIndex == _parser.Slices.Count) { // 已经没有了，最后一片都执行完了
-                HideDialog();
+                End();
 
                 return;
             }
 
             // 第一次要显示对话框
             if (sliceIndex == 0) {
-                ShowDialog();
+                ShowDialogPanel();
             }
 
             _currentSliceIndex = sliceIndex; // 跳转到指定的slice中
             var slice = _parser.Slices[sliceIndex];
 
+            foreach (var operation in slice.AtOperations) {
+                DoAtOperation(operation);
+            }
+
+            foreach (var operation in slice.SharpOperations) {
+                DoSharpOperation(operation);
+            }
+
+            AfterAllOperation();
+            
             // 断句和换页操作(对话框显示操作)
             if (_lastSliceType == DslSliceType.Dialog) {
                 switch (_lastDialogSliceType) {
@@ -75,23 +85,15 @@ namespace Scripts.DSL {
 
                         // 如果选择支显示之前换页，那么会先关闭对话框
                         if (slice.Type == DslSliceType.Option) {
-                            HideDialog();
+                            HideDialogOnly();
                         }
 
                         break;
                 }
             } else if (_lastDialogSliceType == DialogSliceType.Page) { // 如果之前是选择支，则很可能对话框被关闭了           
-                ShowDialog();
+                ShowDialogOnly();
             }
-
-            foreach (var operation in slice.AtOperations) {
-                DoAtOperation(operation);
-            }
-
-            foreach (var operation in slice.SharpOperations) {
-                DoSharpOperation(operation);
-            }
-
+            
             switch (slice.Type) {
 
                 case DslSliceType.Dialog:
@@ -140,7 +142,7 @@ namespace Scripts.DSL {
                     break;
                 case Constants.OPERATION_END:
                     // 结束了就和执行到末尾的操作一样
-                    HideDialog();
+                    HideDialogOnly();
                     _lastEndOperation = null; // 否则会死循环
 
                     break;
@@ -172,8 +174,20 @@ namespace Scripts.DSL {
             }
         }
 
+        /*
+         * 设置完所有参数的回调
+         */
+        protected abstract void AfterAllOperation();
+        
+        /*
+         * 读到末尾的回调
+         */
+        protected abstract void End();
+        
         protected abstract void OtherOperations(Operation operation);
 
+        protected abstract void ShowDialogOnly();
+        
         /**
          * 断句分片结束的操作
          */
@@ -187,12 +201,12 @@ namespace Scripts.DSL {
         /**
          * 隐藏对话框
          */
-        protected abstract void HideDialog();
+        protected abstract void HideDialogOnly();
 
         /**
          * 显示对话框
          */
-        protected abstract void ShowDialog();
+        protected abstract void ShowDialogPanel();
 
         /**
          * 添加文本

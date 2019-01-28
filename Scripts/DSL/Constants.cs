@@ -11,6 +11,7 @@ namespace Scripts.DSL {
         //public const string OPERATION_TEXT_SIZE = "text_size";
         public const string OPERATION_NAME = "name";
         public const string OPERATION_VOICE = "voice";
+        public const string OPERATION_SOUND = "sound";
         public const string OPERATION_BGM = "bgm";
         public const string OPERATION_DO = "do";
         public const string OPERATION_FX = "fx";
