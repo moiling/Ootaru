@@ -142,7 +142,7 @@ namespace Scripts.DSL {
                     break;
                 case Constants.OPERATION_END:
                     // 结束了就和执行到末尾的操作一样
-                    HideDialogOnly();
+                    End();
                     _lastEndOperation = null; // 否则会死循环
 
                     break;

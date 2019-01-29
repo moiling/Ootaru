@@ -7,7 +7,8 @@ namespace CardMode.Scripts {
     public enum SpeakerPosition {
         Left,
         Right,
-        Both
+        Both,
+        None
     }
 
     public class DialogRunner : OperationDslRunner {
@@ -18,7 +19,7 @@ namespace CardMode.Scripts {
 
         private DialogController _controller;
         private string[] _currentSpeakers;
-        private SpeakerPosition _lastSpeakerPosition = SpeakerPosition.Left;
+        private SpeakerPosition _lastSpeakerPosition = SpeakerPosition.None;
         private string[] _currentFaces;
         private string[] _currentFacePosition;
         private string _currentName;
@@ -100,14 +101,9 @@ namespace CardMode.Scripts {
                     }
                 }
             }
-                  
-            if (speakerPosition != _lastSpeakerPosition || _lastHideDialog) {
-                _controller.SwitchDialogModel(speakerPosition);
-                _lastSpeakerPosition = speakerPosition;
-                _lastHideDialog = false;
-            }
-            
+
             if (!(_currentFaces == _lastFaces && _currentFacePosition == _lastFacePosition)) {
+                _controller.ClearFace();
                 for (var i = 0; i < _currentFaces.Length; i++) {
                     var isRight = _currentFacePosition[i].Equals("R");
                     _controller.SetFace(_currentFaces[i], isRight);
@@ -115,6 +111,22 @@ namespace CardMode.Scripts {
 
                 _lastFaces = _currentFaces;
                 _lastFacePosition = _currentFacePosition;
+            }
+            
+            var showName = true;
+            if (_currentFaces.Length > 0 && _currentFaces[0].Equals("none")) {
+                speakerPosition = SpeakerPosition.None;
+            }
+
+            if (_currentSpeakers.Length > 0 && _currentSpeakers[0].Equals("none")) {
+                speakerPosition = SpeakerPosition.None;
+                showName = false;
+            }
+
+            if (speakerPosition != _lastSpeakerPosition || _lastHideDialog) {
+                _controller.SwitchDialogModel(speakerPosition, showName);
+                _lastSpeakerPosition = speakerPosition;
+                _lastHideDialog = false;
             }
 
             if (_currentName != _lastName) {
@@ -176,9 +188,9 @@ namespace CardMode.Scripts {
         }
         
         
-        // TODO 
         protected override void Do(string things) {
             Debug.Log("执行事件：" + things);
+            _controller.Do(things);
         }
         
         // TODO 
