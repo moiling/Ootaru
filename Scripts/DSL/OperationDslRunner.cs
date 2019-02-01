@@ -1,3 +1,5 @@
+using UnityEngine.Analytics;
+
 namespace Scripts.DSL {
     /// <summary>
     /// 指定了所需@命令标签
@@ -48,6 +50,13 @@ namespace Scripts.DSL {
                 case Constants.OPERATION_FX:
                     Fx(operation.Parameter);
                     break;     
+                case Constants.OPERATION_CG:
+                    Cg(operation.Parameter);
+                    break;
+                case Constants.OPERATION_ITEM:
+                    Item(operation.Parameter);
+                    break;
+                
             }
         }
 
@@ -67,11 +76,15 @@ namespace Scripts.DSL {
 
         protected abstract void Character(string[] characterIds);
         
+        protected abstract void Cg(string cg);
+        
         // ----- 添加#标签内容 -----
 
         protected abstract void Set(string parameter, string value);
         
         protected abstract void Do(string things);
+        
+        protected abstract void Item(string item);
     }
 
 }

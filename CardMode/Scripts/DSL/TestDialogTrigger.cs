@@ -10,7 +10,7 @@ namespace CardMode.Scripts {
         private bool _stay;
         
         private void Start() {
-            Dialog = Resources.Load("迷雾中庭前奏_测试文本") as TextAsset;
+            Dialog = Resources.Load("TestDialog2") as TextAsset;
             _controller = DialogController.GetInstance();
          
         }

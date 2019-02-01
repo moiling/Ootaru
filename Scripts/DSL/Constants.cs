@@ -17,5 +17,8 @@ namespace Scripts.DSL {
         public const string OPERATION_FX = "fx";
         public const string OPERATION_NONE = "none";
         public const string OPERATION_TAG = "tag";
+        public const string OPERATION_IF = "if";
+        public const string OPERATION_CG = "cg";
+        public const string OPERATION_ITEM = "item";
     }
 }

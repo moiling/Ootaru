@@ -4,11 +4,12 @@ namespace Scripts {
     public class CommonTools {
         
         public static Color StringToColor(string colorStr) {
-            if (string.IsNullOrEmpty(colorStr)) {
+ 
+            if (string.IsNullOrEmpty(colorStr) || !colorStr.StartsWith("#")) {
                 return new Color();
             }
 
-            var colorInt = int.Parse(colorStr, System.Globalization.NumberStyles.AllowHexSpecifier);
+            var colorInt = int.Parse(colorStr.Substring(1, colorStr.Length - 1), System.Globalization.NumberStyles.AllowHexSpecifier);
 
             return IntToColor(colorInt);
         }

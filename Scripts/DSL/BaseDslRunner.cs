@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Scripts.DSL.Slice;
 
 namespace Scripts.DSL {
@@ -15,6 +16,7 @@ namespace Scripts.DSL {
         private DialogSliceType _lastDialogSliceType;
         private Operation _lastEndOperation; // 上一个切片留下的尾巴操作
         private List<Option> _lastOptions = new List<Option>();
+        private Operation _lastIfOperation = new Operation(OperationType.At, "if", "none", null); // 上一个If操作，如果未修改，要保留到现在
 
         public BaseDslRunner(string text) {
             _parser.Parse(text);
@@ -54,12 +56,31 @@ namespace Scripts.DSL {
 
                 return;
             }
-
+            
             // 第一次要显示对话框
             if (sliceIndex == 0) {
-                ShowDialogPanel();
+                FirstStart();
+            }
+                  
+            // if
+            var ifOperationEnumerator = _parser.Slices[sliceIndex].AtOperations.Where(o => o.Method.Equals("if"))
+                .GetEnumerator();
+
+            Operation ifOperation;
+            if (ifOperationEnumerator.MoveNext() && ifOperationEnumerator.Current != null) {
+                ifOperation = ifOperationEnumerator.Current;
+                _lastIfOperation = ifOperationEnumerator.Current;
+            } else {
+                ifOperation = _lastIfOperation;
+            }
+            
+            if (!IfOperation(ifOperation.Parameter, ifOperation.Extra)) { // 条件不符，放弃当前段
+                Next(++_currentSliceIndex);
+                return;
             }
 
+            ifOperationEnumerator.Dispose();    
+            
             _currentSliceIndex = sliceIndex; // 跳转到指定的slice中
             var slice = _parser.Slices[sliceIndex];
 
@@ -71,8 +92,8 @@ namespace Scripts.DSL {
                 DoSharpOperation(operation);
             }
 
-            AfterAllOperation();
-            
+            AfterAllOperation();       
+
             // 断句和换页操作(对话框显示操作)
             if (_lastSliceType == DslSliceType.Dialog) {
                 switch (_lastDialogSliceType) {
@@ -93,7 +114,7 @@ namespace Scripts.DSL {
             } else if (_lastDialogSliceType == DialogSliceType.Page) { // 如果之前是选择支，则很可能对话框被关闭了           
                 ShowDialogOnly();
             }
-            
+
             switch (slice.Type) {
 
                 case DslSliceType.Dialog:
@@ -125,6 +146,10 @@ namespace Scripts.DSL {
         }
 
         private void DoAtOperation(Operation operation) {
+            if ("if".Equals(operation.Parameter)) {
+                return;
+            }
+            
             switch (operation.Method) {
                 case Constants.OPERATION_JUMP:
                     // 跳转必须要换页                    
@@ -165,7 +190,7 @@ namespace Scripts.DSL {
                     if (operation.Extra != null && !operation.Extra.Equals("")) {
                         CurrentIntro = operation.Extra;
                     }
-                    
+
                     break;
                 default:
                     OtherOperations(operation);
@@ -175,19 +200,24 @@ namespace Scripts.DSL {
         }
 
         /*
+         * If条件
+         */
+        protected abstract bool IfOperation(string parameter, string value);
+
+        /*
          * 设置完所有参数的回调
          */
         protected abstract void AfterAllOperation();
-        
+
         /*
          * 读到末尾的回调
          */
         protected abstract void End();
-        
+
         protected abstract void OtherOperations(Operation operation);
 
         protected abstract void ShowDialogOnly();
-        
+
         /**
          * 断句分片结束的操作
          */
@@ -206,7 +236,7 @@ namespace Scripts.DSL {
         /**
          * 显示对话框
          */
-        protected abstract void ShowDialogPanel();
+        protected abstract void FirstStart();
 
         /**
          * 添加文本

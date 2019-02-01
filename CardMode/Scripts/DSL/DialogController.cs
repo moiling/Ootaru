@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using CardMode.Scripts;
 using Scripts;
 using UnityEditor;
@@ -29,6 +30,7 @@ public class DialogController : MonoBehaviour {
     private bool _canControlOption = false;
 
     private bool _isStart = false;
+    private Hashtable _memory = new Hashtable();
 
     #region Singleton
 
@@ -63,8 +65,9 @@ public class DialogController : MonoBehaviour {
         _runner.Next();
     }
 
-    public void ShowDialogPanel() {
+    public void FirstStart() {
         DialogPanel.SetActive(true);
+        ClearContent();
     }
 
     public void HideDialog() {
@@ -98,11 +101,11 @@ public class DialogController : MonoBehaviour {
 
                 //
                 foreach (Transform face in LeftFacePosition.transform) {
-                    face.GetComponent<Image>().color = CommonTools.StringToColor("FFFFFF");
+                    face.GetComponent<Image>().color = CommonTools.StringToColor("#FFFFFF");
                 }
 
                 foreach (Transform face in RightFacePosition.transform) {
-                    face.GetComponent<Image>().color = CommonTools.StringToColor("DDDDDD");
+                    face.GetComponent<Image>().color = CommonTools.StringToColor("#DDDDDD");
                 }
 
                 // 头像变化
@@ -123,11 +126,11 @@ public class DialogController : MonoBehaviour {
 
                 //
                 foreach (Transform face in RightFacePosition.transform) {
-                    face.GetComponent<Image>().color = CommonTools.StringToColor("FFFFFF");
+                    face.GetComponent<Image>().color = CommonTools.StringToColor("#FFFFFF");
                 }
 
                 foreach (Transform face in LeftFacePosition.transform) {
-                    face.GetComponent<Image>().color = CommonTools.StringToColor("DDDDDD");
+                    face.GetComponent<Image>().color = CommonTools.StringToColor("#DDDDDD");
                 }
 
                 // 头像变化
@@ -259,7 +262,47 @@ public class DialogController : MonoBehaviour {
         if (things.Equals("CG_突然靠近")) {
             TestCG.SetActive(true);
         }
+
+        if (things.Equals("ClearCG")) {
+            TestCG.SetActive(false);
+        }
         
     }
 
+    public void Cg(string cg) {
+        // TODO 测试用
+        if (cg.Equals("none")) {
+            TestCG.SetActive(false);
+        } else {
+            //TestCG.GetComponent<Image>().sprite = 找cg的图片;
+            TestCG.SetActive(true);
+        }
+    }
+
+    public bool IfOperation(string parameter, string value) {
+        if (parameter.Equals("none")) {
+            return true;
+        }
+        
+        // TODO 判断是否有这个if, 测试用
+        
+        Debug.Log(_memory[parameter]);
+        
+        if (_memory[parameter] == null && value.Equals("0")) {
+            return true;
+        }
+
+        return _memory[parameter].Equals(value);
+
+    }
+
+    public void Set(string parameter, string value) {
+        // TODO 运算符
+        if (!_memory.ContainsKey(parameter)) {
+            _memory.Add(parameter, value);
+        } else {
+            _memory[parameter] = value;
+        }
+        
+    }
 }

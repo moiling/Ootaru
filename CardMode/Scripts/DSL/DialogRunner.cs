@@ -17,11 +17,11 @@ namespace CardMode.Scripts {
         // TODO 显示文字又显示对话框的时候需要再点击一次才能显示对话框
         // TODO 所有标志都有一个特殊的none标志，表示清空值
 
-        private DialogController _controller;
-        private string[] _currentSpeakers;
+        private readonly DialogController _controller;
+        private string[] _currentSpeakers = {"none"};
         private SpeakerPosition _lastSpeakerPosition = SpeakerPosition.None;
-        private string[] _currentFaces;
-        private string[] _currentFacePosition;
+        private string[] _currentFaces = {"none"};
+        private string[] _currentFacePosition = {"L"};
         private string _currentName;
         private string _currentVoice;
         private string _currentFx;
@@ -37,7 +37,7 @@ namespace CardMode.Scripts {
         public DialogRunner(string text, DialogController controller) : base(text) {
             _controller = controller;
         }
-        
+
         protected override void Fx(string fxId) {
             Debug.Log("执行特效：" + fxId);
             _currentFx = fxId;
@@ -82,6 +82,11 @@ namespace CardMode.Scripts {
             _currentSpeakers = characterIds;
             // TODO 名字现在是测试用的
             _currentName = _currentSpeakers[0].Equals("Chu") ? "小宙" : "阿让";
+        }
+
+        protected override void Cg(string cg) {
+            Debug.Log("显示Cg");
+            _controller.Cg(cg);
         }
 
         // TODO
@@ -163,9 +168,9 @@ namespace CardMode.Scripts {
             _controller.HideDialog();
         }
 
-        protected override void ShowDialogPanel() {
+        protected override void FirstStart() {
             Debug.Log("显示对话框面板");
-            _controller.ShowDialogPanel();
+            _controller.FirstStart();
         }
 
         protected override void AppendContent(string content) {
@@ -192,10 +197,20 @@ namespace CardMode.Scripts {
             Debug.Log("执行事件：" + things);
             _controller.Do(things);
         }
-        
+
         // TODO 
+        protected override void Item(string item) {
+            Debug.Log("显示item：" + item);
+        }
+        
         protected override void Set(string parameter, string value) {
             Debug.Log("设置：" + parameter + ":" + value);
+            _controller.Set(parameter, value);
+        }
+        
+        protected override bool IfOperation(string parameter, string value) {
+            Debug.Log("if条件：" + parameter + ":" + value);
+            return _controller.IfOperation(parameter, value);
         }
     }
 }
