@@ -1,0 +1,219 @@
+#tag TAG_前奏
+
+@char Jean
+
+@face Chu_1,Jean_1 L,R
+
+所以你就信了那个老女人给你鬼扯的理由{p}
+
+@char Chu
+
+什么老女人啊，看上去你可比长谷川学姐大多了{p}
+
+@char Jean
+
+魔女都是这样，变成和你相仿的年纪来蛊惑你，实际上她可能恐龙都见过{p}
+
+@char Chu
+
+我感觉啊{s}，你鬼扯的可能性更大{p}
+
+@char Jean
+
+@face Chu_1,Jean_sad L,R
+
+欸，我可是为了你好{p}
+
+@char Chu
+
+...{p}
+
+@char Jean
+
+...{p}
+
+@char Chu
+
+宁可信其有，不可信其无吧{p}
+
+@char Jean
+
+@face Chu_1,Jean_1 L,R
+
+那你也相信相信我吧，她说的绝对不是真话{p}
+
+@char Chu
+
+你为什么对学姐她抱有这么大敌意啊{p}
+
+@char Jean
+
+魔女不值得信任{s}
+
+而且我不知道她到底跟你讲了什么，让你如此鬼迷心窍{s}
+
+但是说你是大停电的源头啊，这点也太假了，她可能已经和这片区域的女高中生说了个遍啊{p}
+
+@char Chu
+
+那...{s}她这样做有什么目的啊{p}
+
+@char Jean
+
+不知道，我也说不清楚{p}
+
+{
+@char Chu
+@face Chu_1
+好啦，我相信你:@jump TAG_迷雾中庭zero
+
+我更相信学姐:@source TAG_死亡回廊 死亡回廊
+
+（沉默不语）:@jump TAG_迷雾中庭
+
+}
+
+
+
+#tag TAG_迷雾中庭zero
+
+#set FAVOR 3
+
+@char Jean
+
+@face Chu_1,Jean_happy L,R
+
+@char Jean
+
+(笑){p}
+
+@char Chu
+
+你怎么笑得那么恶心啊！{p}
+
+@char Jean
+
+怎么还不让人笑了{p}
+
+@cg 突然靠近
+
+@face none
+
+@char Jean
+
+不是相信我嘛{p}
+
+@char Chu
+
+哇，你干嘛给我滚开{p}
+
+@sound Metalhurt
+
+@char Jean
+
+痛痛痛痛痛...{s}哇这么用力{p}
+
+@char Chu
+
+谁叫你做那种让人误会的举动{s}
+
+不好意思咯{p}
+
+
+
+#tag TAG_迷雾中庭
+
+@cg none
+
+@char Jean
+
+@face Chu_1,Jean_1 L,R
+
+别动{p}
+
+@char Chu
+
+生气了？{p}
+
+@char Jean
+
+不，有人靠近{p}
+
+@char Chu
+
+啊？{p}
+
+@char Jean
+
+小声点，不是普通人{p}
+
+@char Chu
+
+我感受到了魔力的涌动{p}
+
+@char Chu
+
+魔法师？{p}
+
+@char Jean
+
+可恶，这地方根本不让任何自由电子做功{p}
+
+@char none
+@face none
+
+突然间，埋在地里的水管悉数爆裂{p}
+
+@char Chu
+
+@face Chu_1,Jean_1 L,R
+
+呀！{p}
+
+@char Jean
+
+这家伙的能力，是和水相关的{s}
+
+小宙！{p}
+
+@char Chu
+
+怎...怎么了？{p}
+
+@char Jean
+
+你们学校洗手间都在什么位置{p}
+
+@char Chu
+
+一般在楼梯拐角处{p}
+
+@char none
+@face none
+
+突然间，一楼的洗手间亮了一下{p}
+
+@char Chu
+
+@face Chu_1,Jean_1 L,R
+
+有电了？！{p}
+
+@char Jean
+
+不是，这家伙傻就傻直接在一楼储水{p}
+
+@char none
+@face none
+
+洗手间的窗户有大量的水涌出{p}
+
+@char Jean
+
+@face Chu_1,Jean_1 L,R
+
+这家伙要跑了！{p}
+
+@char Chu
+
+那快追啊！{p}

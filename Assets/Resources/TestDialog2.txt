@@ -1,0 +1,10 @@
+@if TALK_D 0
+#set TALK_D 1
+@char Jean
+@face Chu_1,Jean_1 L,R
+这里是睡研，顾名思义就是研究睡觉的地方。别打扰我，我要继续睡，继续进行社团活动了{p@end}
+
+@if TALK_D 1
+@char Jean
+@face Chu_1,Jean_1 L,R
+zzz{p}

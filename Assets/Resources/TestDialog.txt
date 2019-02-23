@@ -1,0 +1,50 @@
+#tag TAG_00 这里要会显示到存档里
+@char RANG
+@face RANG_1,ZHOU_1 L,R
+问你一个问题好吗?{p}
+
+@char ZHOU
+什么问题?
+你说{s}吧.{p}
+你倒是说啊！{p}
+
+#tag TAG_0
+@char RANG
+@face RANG_1,ZHOU_1 L,R
+1+1等于几?{p}
+{
+    1:@jump TAG_1,
+    2:@jump TAG_2,
+    懒得理你:@jump TAG_3
+}
+
+#tag TAG_1
+@char ZHOU
+等于1{p}
+@char RANG
+不是吧,这都能错?
+你再试一次吧{p@TAG_0}
+
+#tag TAG_2 这里会修改显示到存档的文字
+@char ZHOU
+等于2{p}
+#set BOOK 1
+#set COIN 100
+@char RANG
+真了不起,这本书送给你{p@TAG_4}
+
+#tag TAG_3
+@char ZHOU
+懒得理你{p}
+@char RANG
+哎呀,别这样吗{p@TAG_4}
+
+#tag TAG_4
+@char RANG
+好了,不玩了,我们走吧{p}
+@face RANG_1 L
+真走了啊！{p}
+
+@char RANG,ZHOU
+@face RANG_1,ZHOU_1 L,R
+一起说话{p}

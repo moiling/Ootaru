@@ -1,0 +1,362 @@
+fileFormatVersion: 2
+guid: 329a47f19225e45ea9006d2854acc3b1
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: "190105_Ootaru\u98CE\u683C\u6D4B\u8BD54_0"
+    21300002: "190105_Ootaru\u98CE\u683C\u6D4B\u8BD54_1"
+    21300004: "190105_Ootaru\u98CE\u683C\u6D4B\u8BD54_2"
+    21300006: "190105_Ootaru\u98CE\u683C\u6D4B\u8BD54_3"
+    21300008: "190105_Ootaru\u98CE\u683C\u6D4B\u8BD54_4"
+    21300010: "190105_Ootaru\u98CE\u683C\u6D4B\u8BD54_5"
+    21300012: "190105_Ootaru\u98CE\u683C\u6D4B\u8BD54_6"
+    21300014: "190105_Ootaru\u98CE\u683C\u6D4B\u8BD54_7"
+    21300016: "190105_Ootaru\u98CE\u683C\u6D4B\u8BD54_8"
+    21300018: "190105_Ootaru\u98CE\u683C\u6D4B\u8BD54_9"
+    21300020: "190105_Ootaru\u98CE\u683C\u6D4B\u8BD54_10"
+    21300022: "190105_Ootaru\u98CE\u683C\u6D4B\u8BD54_11"
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "190105_Ootaru\u98CE\u683C\u6D4B\u8BD54_0"
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 607
+        width: 150
+        height: 318
+      alignment: 9
+      pivot: {x: 0.5253568, y: 0.052663166}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c6b8cb340b42490ba3ecace344ec908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "190105_Ootaru\u98CE\u683C\u6D4B\u8BD54_1"
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 607
+        width: 148
+        height: 322
+      alignment: 9
+      pivot: {x: 0.551098, y: 0.05082731}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c5f62e99332942c7850f8398b3985f5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "190105_Ootaru\u98CE\u683C\u6D4B\u8BD54_2"
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 592
+        width: 147
+        height: 324
+      alignment: 9
+      pivot: {x: 0.4549851, y: 0.056517612}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14c837070a0c04f3e9ce01fd32c51064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "190105_Ootaru\u98CE\u683C\u6D4B\u8BD54_3"
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 594
+        width: 149
+        height: 318
+      alignment: 9
+      pivot: {x: 0.48096687, y: 0.051122893}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acd6776b187f748ab883ffa80587c294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "190105_Ootaru\u98CE\u683C\u6D4B\u8BD54_4"
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 269
+        width: 161
+        height: 318
+      alignment: 9
+      pivot: {x: 0.47809824, y: 0.04437534}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a1dedd5078bd4daba6fcf3426de2368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "190105_Ootaru\u98CE\u683C\u6D4B\u8BD54_5"
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 259
+        width: 173
+        height: 316
+      alignment: 9
+      pivot: {x: 0.49192873, y: 0.06697421}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96702e0d98c504560a9960be54abdc81
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "190105_Ootaru\u98CE\u683C\u6D4B\u8BD54_6"
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 269
+        width: 163
+        height: 319
+      alignment: 9
+      pivot: {x: 0.4743012, y: 0.044784114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4582ec4c2a3f486d868e274d68f05bf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "190105_Ootaru\u98CE\u683C\u6D4B\u8BD54_7"
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 259
+        width: 164
+        height: 316
+      alignment: 9
+      pivot: {x: 0.49148595, y: 0.062555626}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 621f0a71f24ea4ab8b1fab092e438299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "190105_Ootaru\u98CE\u683C\u6D4B\u8BD54_8"
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 246
+        width: 164
+        height: 318
+      alignment: 9
+      pivot: {x: 0.55612034, y: 0.06907097}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce62d09fa6be94ad7817fbe122a2eff2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "190105_Ootaru\u98CE\u683C\u6D4B\u8BD54_9"
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 256
+        width: 163
+        height: 320
+      alignment: 9
+      pivot: {x: 0.5439161, y: 0.046197794}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 048424438ab234761b085f6c46a91348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "190105_Ootaru\u98CE\u683C\u6D4B\u8BD54_10"
+      rect:
+        serializedVersion: 2
+        x: 1464
+        y: 246
+        width: 173
+        height: 318
+      alignment: 9
+      pivot: {x: 0.52631354, y: 0.07233136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cef891d51ef0c414aa825e0c5d1ff0c3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "190105_Ootaru\u98CE\u683C\u6D4B\u8BD54_11"
+      rect:
+        serializedVersion: 2
+        x: 1672
+        y: 256
+        width: 163
+        height: 320
+      alignment: 9
+      pivot: {x: 0.5405603, y: 0.03663683}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b06a0921d2d9469581e751280554153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: dc1da73bb077d4ca9a97888b7f8990ea
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

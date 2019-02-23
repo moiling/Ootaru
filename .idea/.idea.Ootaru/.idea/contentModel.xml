@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p=".git" t="Include">
+        <e p="COMMIT_EDITMSG" t="Include" />
+        <e p="config" t="Include" />
+        <e p="description" t="Include" />
+        <e p="HEAD" t="Include" />
+        <e p="hooks" t="Include">
+          <e p="applypatch-msg.sample" t="Include" />
+          <e p="commit-msg.sample" t="Include" />
+          <e p="fsmonitor-watchman.sample" t="Include" />
+          <e p="post-update.sample" t="Include" />
+          <e p="pre-applypatch.sample" t="Include" />
+          <e p="pre-commit.sample" t="Include" />
+          <e p="pre-push.sample" t="Include" />
+          <e p="pre-rebase.sample" t="Include" />
+          <e p="pre-receive.sample" t="Include" />
+          <e p="prepare-commit-msg.sample" t="Include" />
+          <e p="update.sample" t="Include" />
+        </e>
+        <e p="index" t="Include" />
+        <e p="info" t="Include">
+          <e p="exclude" t="Include" />
+        </e>
+        <e p="logs" t="Include">
+          <e p="HEAD" t="Include" />
+          <e p="refs" t="Include">
+            <e p="heads" t="Include">
+              <e p="master" t="Include" />
+            </e>
+            <e p="remotes" t="Include">
+              <e p="origin" t="Include">
+                <e p="master" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="objects" t="Include">
+          <e p="01" t="Include">
+            <e p="7e8c0d23a50cf99e77a89c79f541c79c3d885e" t="Include" />
+            <e p="cf4baaaf32c7a13ddc43ad2f42bfe62c8751dd" t="Include" />
+          </e>
+          <e p="04" t="Include">
+            <e p="acb530b7660f7181a50d5473706c110af8c2d3" t="Include" />
+          </e>
+          <e p="05" t="Include">
+            <e p="a3757888c2edcdbf38656f13e73367f82ee26b" t="Include" />
+          </e>
+          <e p="09" t="Include">
+            <e p="1ef237a4aad352e5b69526865727c3bce0b1c9" t="Include" />
+            <e p="d1e4f2e87284d2132031291a4206edc9604eeb" t="Include" />
+          </e>
+          <e p="0c" t="Include">
+            <e p="5042ba3ea1ca483b2258fd40e100cece7388c3" t="Include" />
+            <e p="7b57807aa2a7746dc22842ae8772040d6cc9cd" t="Include" />
+            <e p="bea8ecade084c59b20ad20b72d70f4c4c0ccb6" t="Include" />
+          </e>
+          <e p="0d" t="Include">
+            <e p="157af34778934b44722bb737d0fd98bc962c8a" t="Include" />
+            <e p="6676d109f3be20840b01d8076b27b5beb2398f" t="Include" />
+            <e p="6ac398a3f7647fe2a4413f299ed52444d3e1f0" t="Include" />
+            <e p="ce10e212db72cfb660931cb804f8f3b6f94a58" t="Include" />
+          </e>
+          <e p="0f" t="Include">
+            <e p="865b829d9fcea87b740fbc0cd79c8f7fec0e6d" t="Include" />
+          </e>
+          <e p="10" t="Include">
+            <e p="d3cd43392e0731568bd787cca32c96f0b4ce79" t="Include" />
+          </e>
+          <e p="11" t="Include">
+            <e p="e858f6724f987266565e65a3c41c5fd54d7ac7" t="Include" />
+          </e>
+          <e p="14" t="Include">
+            <e p="e10da10877824439ea1b0fbac4ac8efad7d3b8" t="Include" />
+          </e>
+          <e p="15" t="Include">
+            <e p="f70f21bc64460c942f9171655dc525dc13510e" t="Include" />
+          </e>
+          <e p="16" t="Include">
+            <e p="e8db20db2f7ec059bf62b584bfc34d0de3a9e3" t="Include" />
+          </e>
+          <e p="17" t="Include">
+            <e p="14a9cb49798de95ef0d0b2ef72017d5e9b428a" t="Include" />
+          </e>
+          <e p="1b" t="Include">
+            <e p="a70fbaa2ba17cd733c90307ffb1469252bd4d8" t="Include" />
+          </e>
+          <e p="1c" t="Include">
+            <e p="8d89dc1fb6715778a02afc79a1e8b3bc238048" t="Include" />
+          </e>
+          <e p="1d" t="Include">
+            <e p="06e8c08001bee00a3cb772895b664803ed199d" t="Include" />
+            <e p="def42b83383099b36977d27a8c5dbc6fae78a1" t="Include" />
+            <e p="e95ad831dccd279a44ed8f02656765231a5769" t="Include" />
+          </e>
+          <e p="1f" t="Include">
+            <e p="97c5c1bdd9b3b6d711254a0c84f7f5ab8b1a9d" t="Include" />
+          </e>
+          <e p="21" t="Include">
+            <e p="b29bc90596df67b12563e55f96d8efce9d3d3b" t="Include" />
+          </e>
+          <e p="23" t="Include">
+            <e p="7076bc3a6811772fe4e2287b20d48dc0140fd0" t="Include" />
+            <e p="f9ea1e0fad1bfa01e248ff950c6983acadd30e" t="Include" />
+          </e>
+          <e p="24" t="Include">
+            <e p="0cfd11e983efe34564bb51d4f1a82806653bbb" t="Include" />
+          </e>
+          <e p="26" t="Include">
+            <e p="717ceb5d396162f3cbe2dbe0c9808ba1128128" t="Include" />
+          </e>
+          <e p="27" t="Include">
+            <e p="f8adf185e9d9ea3e6cbfa84fa157e0e86913c9" t="Include" />
+          </e>
+          <e p="28" t="Include">
+            <e p="d27e6d78eeb79038334a65f1636a8d2a8f51a1" t="Include" />
+          </e>
+          <e p="29" t="Include">
+            <e p="a4196df29e2971713e182139588df986afd259" t="Include" />
+          </e>
+          <e p="2a" t="Include">
+            <e p="994a5ec735ecfc32a9022f7195630a9192d2c2" t="Include" />
+          </e>
+          <e p="2b" t="Include">
+            <e p="0560cc951a890d826492c5dd54406161d0fbc2" t="Include" />
+            <e p="0ee6d95b361649cdb364eb9f368aa671e6e49b" t="Include" />
+            <e p="31c377cd82263a7126d8d05d85eef8a1e47833" t="Include" />
+          </e>
+          <e p="2c" t="Include">
+            <e p="9dddf1d7307ec68665b67f36820468d7ad292b" t="Include" />
+            <e p="de8b754dbf32d80f65b9776f4d13a3599cad9c" t="Include" />
+          </e>
+          <e p="2d" t="Include">
+            <e p="9312fbb2d47bc109968336053a5fedbc3b37ae" t="Include" />
+          </e>
+          <e p="2e" t="Include">
+            <e p="16120aed7fb0194b4ce9c9be72811ca46b13bf" t="Include" />
+          </e>
+          <e p="2f" t="Include">
+            <e p="5b40eea4ee4b7a3aa332f7335417a819c0b2ce" t="Include" />
+          </e>
+          <e p="30" t="Include">
+            <e p="c8dbe11c768700dff8ead1ea9edf31e72a20dd" t="Include" />
+          </e>
+          <e p="34" t="Include">
+            <e p="ebd7b7523d9be1fb756d29cb3bae65af6a7944" t="Include" />
+            <e p="f4d58d28852ab7729b2b53f192c807016b06f6" t="Include" />
+          </e>
+          <e p="36" t="Include">
+            <e p="e62247e35bd3615805399ed8b2b16659741ef6" t="Include" />
+          </e>
+          <e p="38" t="Include">
+            <e p="52b5ff01d4fe4a0d0e55df1322b910c50f7306" t="Include" />
+            <e p="da2a27acbcad5cb761460b39b30bda1d554fb1" t="Include" />
+          </e>
+          <e p="39" t="Include">
+            <e p="895afa201e596b1712b67cc2308618a363bfe7" t="Include" />
+          </e>
+          <e p="3d" t="Include">
+            <e p="0d05de8a23d4c9041b5645b970ad459aa61d4d" t="Include" />
+          </e>
+          <e p="3e" t="Include">
+            <e p="f25e6f084892d089dba6f2bb3464da91777242" t="Include" />
+          </e>
+          <e p="3f" t="Include">
+            <e p="607e37f116ad14095a23ce87c783b888427803" t="Include" />
+          </e>
+          <e p="41" t="Include">
+            <e p="efc51960d8925c247869e124efa41196ee31de" t="Include" />
+          </e>
+          <e p="43" t="Include">
+            <e p="d4569f694e408baf55b0d3e0ab362badcecb76" t="Include" />
+            <e p="ef6a3929c670206456f3de6911091da5a22836" t="Include" />
+          </e>
+          <e p="45" t="Include">
+            <e p="cd7a70da04c6a3f37722ae7f8439b084061a25" t="Include" />
+            <e p="f0e1bd779ad53acc8ae1cd97d8f6ee170bb398" t="Include" />
+          </e>
+          <e p="47" t="Include">
+            <e p="7080a7d6330b043b6a7b14e1c7f425108dc21a" t="Include" />
+          </e>
+          <e p="48" t="Include">
+            <e p="7a854c23acbf59ba52bc1e8ceea725fccd8044" t="Include" />
+            <e p="b9e67b7d0fc2ea35ddf1b24f097e7ef7ca6b77" t="Include" />
+          </e>
+          <e p="49" t="Include">
+            <e p="4fb9a6f19e354f3ec9b155f8c25ef6a081af24" t="Include" />
+          </e>
+          <e p="4d" t="Include">
+            <e p="60edfa215d91664941553e76e9c07e4c938fe1" t="Include" />
+            <e p="61ffbd08759fbaa9df66b7feda63437b01dc57" t="Include" />
+            <e p="69bdd52465e42ae4ebed58c48b491981887543" t="Include" />
+          </e>
+          <e p="4f" t="Include">
+            <e p="cce7ddc45f0d2da138168de39497e6d9bce2ed" t="Include" />
+          </e>
+          <e p="50" t="Include">
+            <e p="9bd9b0a673899158d39977b35ff4c847efcbaf" t="Include" />
+          </e>
+          <e p="52" t="Include">
+            <e p="2c6495c6a649e5099e274351223f6ab51c0cb8" t="Include" />
+          </e>
+          <e p="53" t="Include">
+            <e p="745a32f827c7ebee39ddb2bcde0d2928954025" t="Include" />
+          </e>
+          <e p="56" t="Include">
+            <e p="b97ac8518fd31242ed27df88d5756595f26f99" t="Include" />
+          </e>
+          <e p="58" t="Include">
+            <e p="925e21788692ab11a0955071105fcba1dee093" t="Include" />
+          </e>
+          <e p="59" t="Include">
+            <e p="aade76eb740d6a287dcc721f9a8b1555f65beb" t="Include" />
+          </e>
+          <e p="5a" t="Include">
+            <e p="b5d44e5d626ee997b77a0b9baffe20f783eeff" t="Include" />
+          </e>
+          <e p="5b" t="Include">
+            <e p="afc213c40eeea896fcc3eb9c0d1b67bdd30256" t="Include" />
+            <e p="f027184c1b684652deb21211a234c89602157f" t="Include" />
+          </e>
+          <e p="5c" t="Include">
+            <e p="fdb3ee2b37d5dc60e27de7134d0e3185204799" t="Include" />
+          </e>
+          <e p="5f" t="Include">
+            <e p="e17787453abca6bf674e079f1500f18bb6d76f" t="Include" />
+          </e>
+          <e p="60" t="Include">
+            <e p="d6553595e6f1f005189b3524c9bca4b265f09f" t="Include" />
+          </e>
+          <e p="62" t="Include">
+            <e p="cfb4a528289b7e1f32cfe1f9b4b864d3769e14" t="Include" />
+            <e p="e3270b127520b4c43c3355666c7d6ce208d39e" t="Include" />
+          </e>
+          <e p="63" t="Include">
+            <e p="ddabc1073a047335575251c307247eb3205e81" t="Include" />
+          </e>
+          <e p="65" t="Include">
+            <e p="fcd077f6bdbc0eeaaedc2966fcf49c257325ec" t="Include" />
+          </e>
+          <e p="6b" t="Include">
+            <e p="0c160d908111dd8890ab913c11a270fa26b6ff" t="Include" />
+          </e>
+          <e p="6e" t="Include">
+            <e p="7a297f088cd891e1def029eca3ff23208bc7b4" t="Include" />
+          </e>
+          <e p="70" t="Include">
+            <e p="fd187ef13656da57275f3b0e4d5b319af965fd" t="Include" />
+          </e>
+          <e p="71" t="Include">
+            <e p="3013e5c1ab934b6f894c427a7eae876e71a3ad" t="Include" />
+          </e>
+          <e p="73" t="Include">
+            <e p="35cd7aba870db0ba9de46da52f393cae4f92ba" t="Include" />
+            <e p="5a223e47a5890dc7ce1a7ac5893dd209ec6850" t="Include" />
+            <e p="8c21b69a3e9cab43cb75a6a6feedde4558ce5d" t="Include" />
+          </e>
+          <e p="74" t="Include">
+            <e p="9b84f7cf55bc5109bdac3cc77219daca8a2725" t="Include" />
+          </e>
+          <e p="75" t="Include">
+            <e p="9546cc22935f6d84e843cfee5d6f6f2775b159" t="Include" />
+          </e>
+          <e p="76" t="Include">
+            <e p="5ec60fd957f4e2ce8728b085f77eeb66614636" t="Include" />
+            <e p="dbe1584378f41c4549bad9bd9759bf2642919c" t="Include" />
+          </e>
+          <e p="77" t="Include">
+            <e p="22a121a5061fd2378f9f19cd416b65d26d1f65" t="Include" />
+          </e>
+          <e p="78" t="Include">
+            <e p="3e4e86513c7c32c882c5d99b71cc9b4dd9f307" t="Include" />
+            <e p="92825247e3bf3de9434e7aede50b9bdf045d3d" t="Include" />
+          </e>
+          <e p="79" t="Include">
+            <e p="985877d35e454c12470639470e397c9b2206d9" t="Include" />
+          </e>
+          <e p="7c" t="Include">
+            <e p="68011433ec9f135f177c7a1e8b63835b3bbcc7" t="Include" />
+          </e>
+          <e p="7f" t="Include">
+            <e p="2cf459290804d16aa250232830953bb1c0ef89" t="Include" />
+            <e p="f38c9f8c8a4ffc76f15878e291454332f6a875" t="Include" />
+          </e>
+          <e p="80" t="Include">
+            <e p="ac8decb3b3e2a374734d2e711aabf6922101e8" t="Include" />
+          </e>
+          <e p="81" t="Include">
+            <e p="3cc1ea42b5c11133c26b0d959e9a76dc6e3a3a" t="Include" />
+            <e p="ed2ecae05e0ee2d6e24c584096847a4f818601" t="Include" />
+          </e>
+          <e p="83" t="Include">
+            <e p="529e06dc4d448b35a24d89146fef51277795b3" t="Include" />
+          </e>
+          <e p="84" t="Include">
+            <e p="bca80d33bf4b48d945cdf24eb769c6539de71d" t="Include" />
+          </e>
+          <e p="87" t="Include">
+            <e p="404b0b59f58ddb485dce59be20c8bb435f5a6c" t="Include" />
+          </e>
+          <e p="88" t="Include">
+            <e p="5ce3f7664acd7b6e1824385b2692ddeb1a9af4" t="Include" />
+            <e p="e24e132fe11987baa993d6554fb478ca136e89" t="Include" />
+          </e>
+          <e p="8a" t="Include">
+            <e p="696310165b332f997bb269617f5f8ab7911267" t="Include" />
+            <e p="c361d69426b8a5494dd9c0b9d9f1b2de5ee847" t="Include" />
+          </e>
+          <e p="8b" t="Include">
+            <e p="142ed0c23acd41f386d654ed09c9d2c289c05f" t="Include" />
+          </e>
+          <e p="8d" t="Include">
+            <e p="157f3cd4c005632c495a74c7819a2f529afca9" t="Include" />
+            <e p="2352422349a34829b4603ab29a7395c10628b1" t="Include" />
+          </e>
+          <e p="8e" t="Include">
+            <e p="cdd2859a10d7f64db9bd4d2818081aef3c19e5" t="Include" />
+          </e>
+          <e p="8f" t="Include">
+            <e p="5a4444c848bc3f9b6048c7161a3fa64d660a9a" t="Include" />
+          </e>
+          <e p="91" t="Include">
+            <e p="c3791c0c720a35e83787de3d7a5db732fa7241" t="Include" />
+          </e>
+          <e p="92" t="Include">
+            <e p="3ddb6c7f4e8e9e434f71a589ce51e9962232a7" t="Include" />
+          </e>
+          <e p="94" t="Include">
+            <e p="277ca10521cae886885f0f06d3b6abfada1659" t="Include" />
+            <e p="7d53df4bd1db4b879c36debc5a342d916a671f" t="Include" />
+          </e>
+          <e p="95" t="Include">
+            <e p="3638dd2173af129401c2a27360d9139cdee1d7" t="Include" />
+            <e p="afbc549cd2487ceba26d9ddbe7be15eefb178f" t="Include" />
+          </e>
+          <e p="96" t="Include">
+            <e p="4092223da312097ce3810d0a7cb16581d67491" t="Include" />
+          </e>
+          <e p="98" t="Include">
+            <e p="caa629808817cafc3c29450912b2e58496fe9c" t="Include" />
+          </e>
+          <e p="9f" t="Include">
+            <e p="9ee67c7de7e628122f9e13f2db0eec3533ca93" t="Include" />
+            <e p="c3dcf5022bc6531f27245877b9964c5fb5b883" t="Include" />
+          </e>
+          <e p="a0" t="Include">
+            <e p="02041ad89297d743e4a1fbeb1a9eae3ef4df04" t="Include" />
+          </e>
+          <e p="a2" t="Include">
+            <e p="b69f048cee50a8d5e8be0d500ff5f876e77edf" t="Include" />
+          </e>
+          <e p="a7" t="Include">
+            <e p="4833bc824ee88d2e176e21cda08d3941693c77" t="Include" />
+            <e p="7b94259059fe4898a6e2525abf03cdb6915463" t="Include" />
+          </e>
+          <e p="a8" t="Include">
+            <e p="90efabdaf683bade7dc1ab5226e53f277295cd" t="Include" />
+          </e>
+          <e p="a9" t="Include">
+            <e p="58269c872355461ed0570006a8031a506638b9" t="Include" />
+          </e>
+          <e p="ab" t="Include">
+            <e p="7f60db74fd5532535b7f8b21126d9eb0acdbf2" t="Include" />
+          </e>
+          <e p="ac" t="Include">
+            <e p="26e7b37d3040da1cf789b666aa6fce6460dadf" t="Include" />
+          </e>
+          <e p="ad" t="Include">
+            <e p="4cc08ca342ec23ec5b8c15a87ddf0271c1e564" t="Include" />
+            <e p="64e0f3681c2ab179c72c041bd7c0e2541a286d" t="Include" />
+            <e p="d9334abdbbff9060cf8aacb8ad4f4bb6fecbe1" t="Include" />
+          </e>
+          <e p="af" t="Include">
+            <e p="54f2df5abd57f6400ecfecbab2690edf1dda44" t="Include" />
+          </e>
+          <e p="b0" t="Include">
+            <e p="fcc3cd948d3f1594c1aeec7d0ba60064adc83f" t="Include" />
+          </e>
+          <e p="b2" t="Include">
+            <e p="bf1fe97f724fd70f086abb716353a44273a346" t="Include" />
+          </e>
+          <e p="b3" t="Include">
+            <e p="2c4dec0a0e1c718cdd38e38bec465be738736e" t="Include" />
+          </e>
+          <e p="b4" t="Include">
+            <e p="7b46f0eed6d946eb5e35eed350897acab807e7" t="Include" />
+            <e p="db6b003f6395078ad3e1665fc435aa777f06bd" t="Include" />
+            <e p="e11e2dc0fe5749aec807c9d176d6ea7433db9c" t="Include" />
+          </e>
+          <e p="b7" t="Include">
+            <e p="130c8c285cfc5e46c49b00c88187e87340b96d" t="Include" />
+          </e>
+          <e p="b8" t="Include">
+            <e p="65da3938443c6f656660410d57ec2ce34d2058" t="Include" />
+          </e>
+          <e p="ba" t="Include">
+            <e p="447acb8a3a634aa750652022579b3e8a1229e0" t="Include" />
+          </e>
+          <e p="bc" t="Include">
+            <e p="72691f99b413f0923fdc28c110875b75ab335f" t="Include" />
+          </e>
+          <e p="bd" t="Include">
+            <e p="4abfeb6bf4d7d430656a84ecdb17922e133be3" t="Include" />
+            <e p="ae87296c9be5d8b06d209da091ff319de3aace" t="Include" />
+          </e>
+          <e p="be" t="Include">
+            <e p="c1f106999206eec12ef6521bfe41bf8db2540a" t="Include" />
+          </e>
+          <e p="bf" t="Include">
+            <e p="2b6725ce601fedc1153fbd811955e4cd84afa2" t="Include" />
+          </e>
+          <e p="c0" t="Include">
+            <e p="00fdb21eec57a9bfe2e6c8fb758b1184867842" t="Include" />
+            <e p="5e8c731c27b7b7d64cc72e33c813c4162ef5f8" t="Include" />
+          </e>
+          <e p="c1" t="Include">
+            <e p="15746d95a63713ae19d553977f95266cf1f3d0" t="Include" />
+          </e>
+          <e p="c3" t="Include">
+            <e p="762b32db58b3ee40035d0a1f5615357b8f5681" t="Include" />
+          </e>
+          <e p="c4" t="Include">
+            <e p="c0c88b0f0cc6522662a1f99b58dc1fdde12a9f" t="Include" />
+          </e>
+          <e p="c8" t="Include">
+            <e p="538581abf67cb70e8551ee70ca61ced15a509a" t="Include" />
+          </e>
+          <e p="c9" t="Include">
+            <e p="21131908729411b913c8ec502130a0412cebf2" t="Include" />
+            <e p="411f8ade9bdb5699efd305bc3c19ca38e8487c" t="Include" />
+          </e>
+          <e p="cc" t="Include">
+            <e p="6c26fa52c4739d0229ac0397bb6cc048ee5c1c" t="Include" />
+            <e p="9f96a5846bcb307250c2c6b9fcac29e57381f6" t="Include" />
+          </e>
+          <e p="d0" t="Include">
+            <e p="27a4159335ff6d66ee71d2a3da5bef2abbafea" t="Include" />
+            <e p="77cba0539561698f258c2c603f709127998d31" t="Include" />
+            <e p="d147e817609e006eace1794cfb7691e64c2e0e" t="Include" />
+          </e>
+          <e p="d1" t="Include">
+            <e p="051fbb30f0da789834e68a56dbb0324688ea18" t="Include" />
+          </e>
+          <e p="d2" t="Include">
+            <e p="dbef430d4aa446cb4ff6c1bd62fbf5b0734a36" t="Include" />
+          </e>
+          <e p="d3" t="Include">
+            <e p="e4a2c85d1b906949db895dfc68658ab47c8909" t="Include" />
+          </e>
+          <e p="d4" t="Include">
+            <e p="85cd48b9587398239054cbc3560484bc56505b" t="Include" />
+          </e>
+          <e p="d7" t="Include">
+            <e p="47e1367e451f3243d7a3ebb9e2921bdb4fc3ef" t="Include" />
+            <e p="7ac0b5ebe20e1962dfebf78eddd72feedd65a3" t="Include" />
+          </e>
+          <e p="d8" t="Include">
+            <e p="9ed38f2178d359f0d78211c33a43cecdd314bb" t="Include" />
+            <e p="e18c3676141bfe61ec35811f82f30061430836" t="Include" />
+          </e>
+          <e p="db" t="Include">
+            <e p="0e120c40a4a2de32699be633d9a2b0bb3fb9b8" t="Include" />
+            <e p="8bb840e85858ddccc53599b842d1ab29a0b116" t="Include" />
+            <e p="8c004a4f951ab8362d1b00950d78f9af412269" t="Include" />
+            <e p="9111638e71353c4f16120a7f2b4ed176739d17" t="Include" />
+            <e p="a79db92f8e560e0c139f8c60293c14baf9107e" t="Include" />
+          </e>
+          <e p="de" t="Include">
+            <e p="b0a7d9a1917c0b2afc78797b84172d799063f2" t="Include" />
+          </e>
+          <e p="e1" t="Include">
+            <e p="899cb061e566e55797c68762f801675e7f3288" t="Include" />
+          </e>
+          <e p="e6" t="Include">
+            <e p="9de29bb2d1d6434b8b29ae775ad8c2e48c5391" t="Include" />
+            <e p="de64fb5c67224acbb779042dc73e3d42bd7a8e" t="Include" />
+          </e>
+          <e p="e7" t="Include">
+            <e p="9f2fcdcaabb62e7ab6c42f5c893d3b4012af09" t="Include" />
+          </e>
+          <e p="e8" t="Include">
+            <e p="c39f68c86f4da25b0751bd2fed8767e659c718" t="Include" />
+          </e>
+          <e p="ec" t="Include">
+            <e p="18bc53d63a82b49a2bbbea653d2fdb78e1effd" t="Include" />
+            <e p="2f91689bfa1d99b3f0284802e7f7ec0a178a5d" t="Include" />
+          </e>
+          <e p="ed" t="Include">
+            <e p="3f4b1e94160063618839cff9c4e9b659bc8662" t="Include" />
+            <e p="bf6f0a33962ba095942621034d3fce50094c9f" t="Include" />
+          </e>
+          <e p="ef" t="Include">
+            <e p="42afe55a5b5265655326b73616858fe663d2ab" t="Include" />
+            <e p="b3abe7b928f831b7f3d4a9d760a1d66407c357" t="Include" />
+          </e>
+          <e p="f1" t="Include">
+            <e p="4a4aecc3962b46327905f8ce0ffa29279d50e5" t="Include" />
+            <e p="9b0f5d9a751c703b7023aa5078fa226775e7e8" t="Include" />
+          </e>
+          <e p="f2" t="Include">
+            <e p="707c03eaab68c24881a03932e4e5524e13c31f" t="Include" />
+            <e p="bbae9e6d74cadcb654bf0e3c6455e2873b2480" t="Include" />
+          </e>
+          <e p="f3" t="Include">
+            <e p="3a67ba8d4290cb35a4d08920f3c029260ae250" t="Include" />
+            <e p="5e4afbcf78c01d54cd580fa174726af8acde44" t="Include" />
+          </e>
+          <e p="f5" t="Include">
+            <e p="9759ff070234e9f7d9376d40ac3e97c78ee21a" t="Include" />
+          </e>
+          <e p="f7" t="Include">
+            <e p="9616489418f039c0d0026f686a8520cc8f1684" t="Include" />
+          </e>
+          <e p="f9" t="Include">
+            <e p="8948143248ef553706dec1fa281f574dc591f8" t="Include" />
+          </e>
+          <e p="fa" t="Include">
+            <e p="0ec5d125c0f5b43b2a51778314e646ed013db3" t="Include" />
+          </e>
+          <e p="fc" t="Include">
+            <e p="3cec5dfb3a399bf2f0af27af4381492825c97e" t="Include" />
+            <e p="c2a7d90f1506a8f7475b92ebc71c718ae18af2" t="Include" />
+          </e>
+          <e p="fd" t="Include">
+            <e p="3d717afaf819725ec8d5484195c0b49380f095" t="Include" />
+          </e>
+          <e p="ff" t="Include">
+            <e p="55b2c8135922d54dea37f8419d829a54d8ee58" t="Include" />
+          </e>
+          <e p="info" t="Include" />
+          <e p="pack" t="Include" />
+        </e>
+        <e p="refs" t="Include">
+          <e p="heads" t="Include">
+            <e p="master" t="Include" />
+          </e>
+          <e p="remotes" t="Include">
+            <e p="origin" t="Include">
+              <e p="master" t="Include" />
+            </e>
+          </e>
+          <e p="tags" t="Include" />
+        </e>
+      </e>
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="CardMode" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="CameraFollowPlayer.cs" t="Include" />
+            <e p="CameraMove.cs" t="Include" />
+            <e p="CameraRotate.cs" t="Include" />
+            <e p="CameraZoom.cs" t="Include" />
+            <e p="Door.cs" t="Include" />
+            <e p="DSL" t="Include">
+              <e p="DialogController.cs" t="Include" />
+              <e p="DialogRunner.cs" t="Include" />
+              <e p="OptionController.cs" t="Include" />
+              <e p="TestDialogTrigger.cs" t="Include" />
+            </e>
+            <e p="FaceToCamera.cs" t="Include" />
+            <e p="PlayerController.cs" t="Include" />
+            <e p="TransparentWall.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Fonts" t="Include">
+          <e p="TextMehProChineseFonts" t="Include">
+            <e p="chinese.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Nonograms" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="ButtonCopyNonograms.cs" t="Include" />
+            <e p="ButtonGenerateNonograms.cs" t="Include" />
+            <e p="ButtonResetNonograms.cs" t="Include" />
+            <e p="MouseController.cs" t="Include" />
+            <e p="NonogramsBlock.cs" t="Include" />
+            <e p="NonogramsCalculater.cs" t="Include" />
+            <e p="NonogramsCreator.cs" t="Include" />
+            <e p="NonogramsNumber.cs" t="Include" />
+            <e p="NonogramsType.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Resources" t="Include">
+          <e p="TestDialog.txt" t="Include" />
+          <e p="TestDialog2.txt" t="Include" />
+          <e p="迷雾中庭前奏_测试文本.txt" t="Include" />
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="CommonTools.cs" t="Include" />
+          <e p="DSL" t="Include">
+            <e p="BaseDslRunner.cs" t="Include" />
+            <e p="Constants.cs" t="Include" />
+            <e p="DSLParser.cs" t="Include" />
+            <e p="Operation.cs" t="Include" />
+            <e p="OperationDslRunner.cs" t="Include" />
+            <e p="Option.cs" t="Include" />
+            <e p="Slice" t="Include">
+              <e p="BaseSlice.cs" t="Include" />
+              <e p="DialogSlice.cs" t="Include" />
+              <e p="OptionSlice.cs" t="Include" />
+            </e>
+          </e>
+          <e p="SpriteShadow.cs" t="Include" />
+        </e>
+        <e p="Shaders" t="Include">
+          <e p="SpriteDefault-Z.shader" t="Include" />
+          <e p="SpriteDiffuse-Z.shader" t="Include" />
+          <e p="SpriteDiffuse.shader" t="Include" />
+        </e>
+      </e>
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Ootaru.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+    </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2018.2/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2018.2/resharper-host/local/Transient/ReSharperHost/v182/SolutionCaches/_Ootaru.174503004.00" t="ExcludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
+  </component>
+</project>
